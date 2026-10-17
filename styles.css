@@ -1,4 +1,4 @@
-*{
+* {
     font-family:"Trebuchet MS";
 }
 
@@ -47,7 +47,17 @@ nav a:hover {
     height:100%;
 }
 
-.hero h1 {
-    background:none;
-    color:white;
+section:not(.hero) {
+    padding: 1em;
+}
+h1 {
+    text-align:center;
+}
+p {
+    text-align:justify;
+    font-family:"Trebuchet MS";
+}
+
+.footnote {
+    text-align:center;
 }
