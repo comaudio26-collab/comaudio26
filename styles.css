@@ -21,9 +21,11 @@ nav {
 }
 nav a {
     color: white;
+}
+a {
     text-decoration: none;
 }
-nav a:hover {
+a:hover {
     text-decoration: underline;
 }
 
@@ -54,10 +56,19 @@ h1 {
     text-align:center;
 }
 p {
-    text-align:justify;
-    font-family:"Trebuchet MS";
+    text-align: justify;
+    font-family: "Trebuchet MS";
+    color: black;
+}
+
+.zensiert {
+    background-color:black;
 }
 
 .footnote {
     text-align:center;
+    color: grey;
+}
+.footnote a {
+    color: grey;
 }
