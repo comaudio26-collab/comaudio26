@@ -1,0 +1,1 @@
+Der Quellcode (HTML/CSS) dieses Projekts steht unter der MIT-Lizenz. Alle Inhalte, Texte, Logos und Bilder (insbesondere unter /bilder) sind urheberrechtlich geschützt und von dieser Lizenz ausgenommen.
