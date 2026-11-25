@@ -1,52 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>CoM Audio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoM Audio – Veranstaltungstechnik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-        <link rel="stylesheet" type="text/css" href="fonts.css">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <style>
-        p {
-            font-family: "Roboto", sans-serif;
-        }
-    </style>
-    <body>
-        <section class="hero">
-            <div class="hero-blur">
-                <img src="bilder/logo.png">
+<body>
+  <header class="hero">
+    <div class="hero-overlay">
+      <nav>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#technik">Technik</a>
+        <a href="#unterstuetze">Kooperationen</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <div class="hero-content">
+        <h1><img src="bilder/logo.png" alt="CoM Audio – Veranstaltungstechnik" class="logo"></h1>
+        <a href="#kontakt" class="button">Anfrage senden</a>
+      </div>
+    </div>
+  </header>
+
+    <main>
+        <section id="ueber-mich">
+            <h2>Constantin Müller</h2>
+            <p>
+                Ich bin 14 Jahre alt und mache seit 4 Jahren Veranstaltungstechnik.
+                Ich habe bei Sternberg Audio ein Praktikum gemacht und bin mit vielen Technikern,
+                wie <span class="zensiert">***** ********</span> – ehemaliger Techniker von <span class="zensiert">*****</span> – befreundet.
+            </p>
+        </section>
+
+        <section id="technik">
+            <h2>So arbeite ich</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Sicherheit zuerst</h3>
+                    <p>Lautsprecher, Stative und Kabel werden immer sicher aufgebaut und betrieben.</p>
+                </article>
+                <article class="card">
+                    <h3>Gute Planung</h3>
+                    <p>Bei größeren Veranstaltungen wird vorher besprochen, welche Technik benötigt wird.</p>
+                </article>
+                <article class="card">
+                    <h3>Faire Preise</h3>
+                    <p>Der Preis wird anschließend individuell berechnet.</p>
+                </article>
             </div>
         </section>
 
-        <section>
-            <h1>Constantin Müller</h1>
-            <p>
-                Ich bin 14 Jahre alt und mache seit 4 Jahren veranstaltungstechnik.
-                Ich habe bei Sternberg Audio ein Praktikum gemacht und bin mit vielen Technikern,
-                wie <span class="zensiert">***** ********</span> - ehemaliger Techniker von <span class="zensiert">*****</span> - befreundet.
-            </p>
+        <section id="unterstuetze">
+            <h2>Ich unterstütze</h2>
+            <figure>
+                <!-- Tipp: Bild lokal speichern (bilder/be-real.png), sobald die Christuskirche zugestimmt hat. -->
+                <img
+                    class="band-image"
+                    src="https://christuskirche-koeln.de/wp-content/uploads/sites/3/2026/03/CK-Be-Real-Band_2026-1024x576.png"
+                    alt="Be Real Jugendband"
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async">
+                <figcaption>Be Real Jugendband</figcaption>
+            </figure>
         </section>
 
-        <section>
-            <h1>Ich Unterstütze</h1>
-            <img src="https://christuskirche-koeln.de/wp-content/uploads/sites/3/2026/03/CK-Be-Real-Band_2026-1024x576.png" width="auto" height="200em">
-            <p>
-                Be Real Jugendband
-            </p>
-        </section>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Schreib mir, welche Veranstaltung du planst. Gemeinsam klären wir, welche Technik du brauchst.</p>
 
-        <section>
-            <h1>Rechtliches</h1>
-            <p>
-                Da ich 14 Jahre alt bin, müssen bei der Gründung eines echten Unternehmens meine Eltern bzw. gesetzlichen Vertreter einbezogen werden.
-                Außerdem müssen die notwendigen rechtlichen und steuerlichen Voraussetzungen geklärt werden.
-            </p>
-        </section>
+            <form id="mailto-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Dein Name *</label>
+                        <input type="text" id="name" required placeholder="Max Mustermann">
+                    </div>
+                    <div class="form-group">
+                        <label for="datum">Datum der Veranstaltung</label>
+                        <input 
+                            type="text" 
+                            id="datum" 
+                            inputmode="numeric" 
+                            maxlength="10" 
+                            placeholder="TT.MM.JJJJ"
+                            pattern="\d{2}\.\d{2}\.\d{4}">
+                    </div>
+                </div>
 
-        <section class="footnote">
-            Gebaut von <a target="new" href="https://maxi436.github.io">maxi436</a><br>
+                <div class="form-group">
+                    <label for="ort">Ort / Location (ca.)</label>
+                    <input type="text" id="ort" placeholder="z. B. Köln-Ehrenfeld">
+                </div>
+
+                <div class="form-group">
+                    <label for="nachricht">Infos zum Event (Art, Gästeanzahl, Wünsche) *</label>
+                    <textarea id="nachricht" rows="4" required placeholder="Geburtstag mit ca. 50 Leuten, brauche Musik und Mikrofon..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="button">E-Mail-Programm öffnen</button>
+                    <button type="button" id="copy-email" class="button button-secondary">E-Mail-Adresse kopieren</button>
+                </div>
+                <p id="copy-feedback" class="copy-feedback" aria-live="polite"></p>
+            </form>
         </section>
-    </body>
+    </main>
+
+    <footer class="footnote">
+        <p>
+            <a href="impressum.html">Impressum</a> ·
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+        <p>Gebaut von <a target="_blank" rel="noopener" href="https://maxi436.github.io">maxi436</a></p>
+    </footer>
+
+    <script>
+        const empfaenger = "comaudio26@gmail.com";
+        const datumInput = document.getElementById("datum");
+
+        // Automatische Punkt-Formatierung (TT.MM.JJJJ) beim Tippen
+        datumInput.addEventListener("input", function (e) {
+            // Alle Nicht-Zahlen entfernen
+            let zahlen = e.target.value.replace(/\D/g, "").slice(0, 8);
+            
+            if (zahlen.length > 4) {
+                e.target.value = `${zahlen.slice(0, 2)}.${zahlen.slice(2, 4)}.${zahlen.slice(4)}`;
+            } else if (zahlen.length > 2) {
+                e.target.value = `${zahlen.slice(0, 2)}.${zahlen.slice(2)}`;
+            } else {
+                e.target.value = zahlen;
+            }
+        });
+
+        document.getElementById("mailto-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const datum = datumInput.value.trim();
+            const ort = document.getElementById("ort").value.trim();
+            const nachricht = document.getElementById("nachricht").value.trim();
+
+            const betreff = `Technikanfrage von ${name}`;
+            const text = 
+`Hallo Constantin,
+
+ich möchte eine Anfrage für Veranstaltungstechnik stellen:
+
+Name: ${name}
+Datum: ${datum || "Noch offen"}
+Ort: ${ort || "Noch offen"}
+
+Infos zur Veranstaltung:
+${nachricht}`;
+
+            window.location.href = `mailto:${empfaenger}?subject=${encodeURIComponent(betreff)}&body=${encodeURIComponent(text)}`;
+        });
+
+        // Fallback: E-Mail-Adresse kopieren
+        document.getElementById("copy-email").addEventListener("click", function () {
+            navigator.clipboard.writeText(empfaenger).then(() => {
+                const feedback = document.getElementById("copy-feedback");
+                feedback.textContent = `Adresse (${empfaenger}) wurde kopiert!`;
+                setTimeout(() => { feedback.textContent = ""; }, 4000);
+            });
+        });
+    </script>
+</body>
 </html>
