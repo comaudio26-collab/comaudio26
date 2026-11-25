@@ -51,7 +51,7 @@ a:focus-visible {
 /* Hero */
 .hero {
     background-color: #1a1a1f;
-    background-image: url("bilder/hero.jpg");
+    background-image: url("assets/hero.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
